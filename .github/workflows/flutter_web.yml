@@ -1,0 +1,40 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Flutter Web Build & Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Setup Java
+        uses: actions/setup-java@v1
+        with:
+          java-version: '12.x'
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '3.3.10'
+          channel: stable
+          
+      - name: Download Dependencies
+        run: flutter pub get
+        
+      - name: Build Web Release
+        run: flutter build web --base-href /flutter_web_deploy/
+          
+      - name: Deploy Website
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: release
+          folder: build/web/

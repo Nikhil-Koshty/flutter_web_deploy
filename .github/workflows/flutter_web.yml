@@ -35,7 +35,7 @@ jobs:
         run: flutter pub get
         
       - name: Build Web Release
-        run: flutter build web --base-href /flutter_web_deploy/
+        run: flutter build web --dart-define CUSTOM_BASE_HREF=/flutter_web_deploy/ --base-href /flutter_web_deploy/
           
       - name: Deploy Website
         uses: JamesIves/github-pages-deploy-action@v4

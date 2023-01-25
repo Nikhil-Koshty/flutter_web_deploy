@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -29,15 +27,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String getBasePath() {
-    Map<String, String>? args = document.getElementById('my_base_href')?.attributes;
-    String? baseHref = args?['href'];
-    if (baseHref != null) {
-      return Uri.base.origin + baseHref;
-    }
-    throw 'Error getting base path';
-  }
-
   @override
   void initState() {
     super.initState();
@@ -52,8 +41,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(getBasePath()),
+          children: const <Widget>[
+            Text(String.fromEnvironment('CUSTOM_BASE_HREF', defaultValue: 'N/A')),
           ],
         ),
       ),

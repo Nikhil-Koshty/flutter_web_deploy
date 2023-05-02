@@ -1,6 +1,6 @@
 {
-    "name": "flutter_web_deploy",
-    "short_name": "flutter_web_deploy",
+    "name": "foodpod",
+    "short_name": "foodpod",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

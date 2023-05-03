@@ -1,6 +1,6 @@
 {
-    "name": "foodpod",
-    "short_name": "foodpod",
+    "name": "flutter_auth_navigation",
+    "short_name": "flutter_auth_navigation",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

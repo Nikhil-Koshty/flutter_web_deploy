@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
+    <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
 
@@ -14,46 +14,81 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="/flutter_web_deploy/">
+    <base href="/flutter_web_deploy/">
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="A new Flutter project.">
 
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="flutter_auth_navigation">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="flutter_web_deploy">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>flutter_auth_navigation</title>
-  <link rel="manifest" href="manifest.json">
+    <title>FoodPod</title>
+    <link rel="manifest" href="manifest.json">
 
-  <script>
+    <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = '190186222';
-  </script>
-  <!-- This script adds the flutter initialization JS code -->
-  <script src="flutter.js" defer></script>
+        var serviceWorkerVersion = '851411814';
+    </script>
+    <!-- This script adds the flutter initialization JS code -->
+    <script src="flutter.js" defer></script>
+
+<!--    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">-->
+<!--    <meta http-equiv="Content-Style-Type" content="text/css">-->
+<!--    <title>foodpod</title>-->
+<!--    <meta name="Description" content="A new Flutter project.">-->
+<!--    <meta name="Generator" content="Cocoa HTML Writer">-->
+<!--    <meta name="CocoaVersion" content="2022.5">-->
+<!--    <style type="text/css">-->
+<!--    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #fc3a5f; -webkit-text-stroke: #fc3a5f}-->
+<!--    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #b2bacb; -webkit-text-stroke: #b2bacb}-->
+<!--    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #565b86; -webkit-text-stroke: #565b86}-->
+<!--    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Menlo; color: #b2bacb; -webkit-text-stroke: #b2bacb; min-height: 15.0px}-->
+<!--    span.s1 {font-kerning: none; color: #b97ae5; -webkit-text-stroke: 0px #b97ae5}-->
+<!--    span.s2 {font-kerning: none}-->
+<!--    span.s3 {font-kerning: none; color: #b2bacb; -webkit-text-stroke: 0px #b2bacb}-->
+<!--    span.s4 {font-kerning: none; color: #fec159; -webkit-text-stroke: 0px #fec159}-->
+
+<!--    </style>-->
 </head>
 <body>
-  <script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-messaging.js"></script>
+<script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyBh4b1FEzYxH0oSBZoUBaTS7Tpr9WyunAw",
+        authDomain: "clickpos-sale-4b2a3.firebaseapp.com",
+        databaseURL: "https://clickpos-sale-4b2a3.firebaseio.com",
+        projectId: "clickpos-sale-4b2a3",
+        storageBucket: "clickpos-sale-4b2a3.appspot.com",
+        messagingSenderId: "987930713313",
+        appId: "1:987930713313:web:1fb41b9ad02027d215eba0",
+        measurementId: "G-961422FF0S"
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+</script>
+<script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
         }
+      }).then(function(engineInitializer) {
+        return engineInitializer.initializeEngine();
+      }).then(function(appRunner) {
+        return appRunner.runApp();
       });
     });
-  </script>
+</script>
 </body>
 </html>
